@@ -1,2 +1,1 @@
-# tokopedia-spamwa
-ini ada batas spam nya ouy
+fungsi buat kerjaain teman kalian yakan wkwwk au ah
