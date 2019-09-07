@@ -4,9 +4,7 @@ dibuat oleh bahasa :
  1. Python
  2. Bash 
 ### requirements for bash shell:
-apt install wget </br>
-apt install curl<br>
-apt install jq
+apt install curl </br>
 
 ----------------------------
 ### requirements for python
