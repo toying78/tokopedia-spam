@@ -11,9 +11,6 @@ apt install jq
 ----------------------------
 ### requirements for python
 pip3 install requests</br>
-pip3 install click<br>
-pip3 install termcolor<br>
-pip3 install wget
 
 --------------------------
 
